@@ -20,6 +20,8 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "materialize-css": "^0.100.2",
+    "octicons": "^7.1.0",
     "path": "^0.12.7"
   }
 }
