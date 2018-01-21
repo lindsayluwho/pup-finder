@@ -360,35 +360,19 @@
       $.post("/api/pups", user,
         function(data) {
          console.log(data);
+         fetchPup(data);
         });
     	});
     	
     	// display modal with fetched /api/pups data
-    	function fetchPup() {
+    	function fetchPup(pup) {
 
-      var currentURL = window.location.origin;
-
-      $.ajax({ url: currentURL + "/api/pups"}, method: "GET" )
-      .then(function(pup) {
-
-        // log the URL so we have access to it for troubleshooting
-        console.log("------------------------------------");
-        console.log("URL: " + currentURL + "/api/pups");
-        console.log("------------------------------------");
-
-        // log the pup to console, where it will show up as an object.
-        console.log(pup);
-        console.log("------------------------------------");
-
-        // Render modal with pup name and picture
+         // Render modal with pup name and picture
         $("#pupName").append(pup.name);
         $(".modal-body").append(pup.photo);
-        $("#modal").modal();
-
-        });
+        $("#modal").modal("show");
       
-    }
-    fetchPup();
+    	};
 
 		</script>
 	</body>
