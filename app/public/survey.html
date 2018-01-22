@@ -8,14 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <!-- Bootstrap core CSS -->
-    <link href="../bootstrap%20theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap%20theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template -->
-    <link href="../bootstrap%20theme/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/bootstrap%20theme/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="../bootstrap%20theme/css/grayscale.min.css" rel="stylesheet">
+    <link href="/bootstrap%20theme/css/grayscale.min.css" rel="stylesheet">
     <style type="text/css"></style>
 </head>
 
@@ -201,7 +201,7 @@
                             <label class="form-check-label" for="inlineCheckbox4">4 - disagree</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox5" value="5">
+                            <input class="form-check-input" type="radio" id="question7" value="5">
                             <label class="form-check-label" for="inlineCheckbox5">5 - strongly disagree</label>
                         </div>
                       </div>
@@ -325,35 +325,33 @@
             <p>Copyright &copy; Lindsay Brown 2018</p>
         </div>
     </footer>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <!-- Bootstrap core JavaScript -->
-    <script src="../bootstrap%20theme/vendor/jquery/jquery.min.js"></script>
-    <script src="../bootstrap%20theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/bootstrap%20theme/vendor/jquery/jquery.min.js"></script>
+    <script src="/bootstrap%20theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Plugin JavaScript -->
-    <script src="../bootstrap%20theme/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/bootstrap%20theme/vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for this template -->
-    <script src="../bootstrap%20theme/js/grayscale.min.js"></script>		
+    <script src="/bootstrap%20theme/js/grayscale.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>		
     <script type="text/javascript">
     	// grab survey responses on button click
     	$("button").click(function(){
     		event.preventDefault();
 
-      // Here we grab the form elements
-      var question1 = $('input[id=question1]:checked').val();
-      var question2 = $('input[id=question2]:checked').val();
-      var question3 = $('input[id=question3]:checked').val();
-      var question4 = $('input[id=question4]:checked').val();
-      var question5 = $('input[id=question5]:checked').val();
-      var question6 = $('input[id=question6]:checked').val();
-      var question7 = $('input[id=question7]:checked').val();
-      var question8 = $('input[id=question8]:checked').val();
-      var question9 = $('input[id=question9]:checked').val();
-      var question10 = $('input[id=question10]:checked').val();
-
-      var user = {
-        scores: [question1, question2, question3, question4, question5, question6, question7, question8, question9, question10];
-      };
-
-      
+    		var user = {
+	    		question1: $('input[id=question1]:checked').val(),
+	      	question2: $('input[id=question2]:checked').val(),
+	      	question3: $('input[id=question3]:checked').val(),
+	      	question4: $('input[id=question4]:checked').val(),
+	      	question5: $('input[id=question5]:checked').val(),
+	      	question6: $('input[id=question6]:checked').val(),
+	      	question7: $('input[id=question7]:checked').val(),
+	      	question8: $('input[id=question8]:checked').val(),
+	      	question9: $('input[id=question9]:checked').val(),
+	      	question10: $('input[id=question10]:checked').val()
+    		}
 
       // post responses to /api/pups
 
