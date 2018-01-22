@@ -13,6 +13,9 @@ function apiRoutes(app){
 	
 	app.post("/api/pups", function(req,res){
 		// get user scores and push into an array
+		userArray = [];
+		pupScores = [];
+		differencesArray = [];
 		var scores = req.body;
 		userArray.push(parseInt(scores.question1));
 		userArray.push(parseInt(scores.question2));
